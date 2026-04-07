@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 const steps = [
   {
@@ -10,18 +9,13 @@ const steps = [
   },
   {
     num: 2,
-    title: 'التسجيل',
-    detail: 'سجل بياناتك الأساسية في دقائق معدودة — لا حاجة لزيارة عيادة. أجب عن بعض الأسئلة السريعة حول تاريخك الصحي وأهدافك وستعرف مدى أهليتك خلال يومين.',
-  },
-  {
-    num: 3,
     title: 'خطة مخصصة',
     detail: 'خطة علاجية وغذائية مصممة خصيصاً لك. تشمل الوصفة الطبية وإرشادات التغذية والتمارين الموافقة لاحتياجاتك وأهدافك.',
   },
   {
-    num: 4,
-    title: 'توصيل ومتابعة',
-    detail: 'توصيل العلاج لباب منزلك مع متابعة مستمرة من فريقنا الطبي وأخصائيي التغذية لضمان وصولك لهدفك بأمان.',
+    num: 3,
+    title: 'المتابعة المستمرة',
+    detail: 'متابعة مستمرة من فريقنا الطبي وأخصائيي التغذية لضمان وصولك لهدفك بأمان.',
   },
 ];
 
@@ -49,7 +43,7 @@ export default function HowItWorksTimeline() {
                 كيف يعمل البرنامج؟
               </h2>
               <p className="text-slate-500 text-base leading-relaxed">
-                أربع خطوات بسيطة تفصلك عن حياة أكثر صحة
+                ثلاث خطوات بسيطة تفصلك عن حياة أكثر صحة
               </p>
             </motion.div>
           </div>
@@ -68,7 +62,7 @@ export default function HowItWorksTimeline() {
               <svg className="w-4 h-4 flex-shrink-0 text-[#0f4c5c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21V7l9-4 9 4v14M3 21h18M9 21V9h6v12" />
               </svg>
-              <span className="text-sm font-semibold text-[#0f4c5c]">ابدأ رحلتك في 4 خطوات بسيطة</span>
+              <span className="text-sm font-semibold text-[#0f4c5c]">ابدأ رحلتك في 3 خطوات بسيطة</span>
             </motion.div>
 
             {/* Steps list with vertical line */}
@@ -98,7 +92,8 @@ export default function HowItWorksTimeline() {
                       <div className="relative flex-shrink-0 z-10">
                         <div
                           className={`rounded-full border-2 transition-all duration-300`}
-                          style={{ width: DOT, height: DOT,
+                          style={{
+                            width: DOT, height: DOT,
                             background: isOpen ? '#9dce5b' : '#fff',
                             borderColor: isOpen ? '#9dce5b' : '#cbd5e1',
                           }}
@@ -107,18 +102,16 @@ export default function HowItWorksTimeline() {
 
                       {/* Title */}
                       <span
-                        className={`flex-1 text-right font-semibold text-base md:text-lg transition-colors duration-200 ${
-                          isOpen ? 'text-slate-900' : 'text-slate-600 group-hover:text-slate-900'
-                        }`}
+                        className={`flex-1 text-right font-semibold text-base md:text-lg transition-colors duration-200 ${isOpen ? 'text-slate-900' : 'text-slate-600 group-hover:text-slate-900'
+                          }`}
                       >
                         {step.num}. {step.title}
                       </span>
 
                       {/* Chevron — last in RTL = appears on the left */}
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 text-slate-400 transition-transform duration-300 ${
-                          isOpen ? 'rotate-180' : ''
-                        }`}
+                        className={`w-5 h-5 flex-shrink-0 text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+                          }`}
                         fill="none" stroke="currentColor" viewBox="0 0 24 24"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -142,14 +135,6 @@ export default function HowItWorksTimeline() {
                               {step.detail}
                             </p>
 
-                            {i === steps.length - 1 && (
-                              <Link
-                                to="/onboarding"
-                                className="inline-flex items-center gap-2 bg-[#0f4c5c] hover:bg-[#0d3f4e] text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors duration-200"
-                              >
-                                ابدأ الآن
-                              </Link>
-                            )}
                           </div>
                         </motion.div>
                       )}

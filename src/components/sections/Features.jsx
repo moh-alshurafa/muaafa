@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Stethoscope, FlaskConical, Apple, Activity } from 'lucide-react';
+import { Stethoscope, Apple, Activity } from 'lucide-react';
 
 export default function Features() {
   const features = [
@@ -22,12 +22,6 @@ export default function Features() {
       icon: <Apple className="w-8 h-8 text-orange-400" />,
       bg: "bg-orange-50"
     },
-    {
-      title: "زيارات المختبر",
-      desc: "فحوصات دورية وتحاليل شاملة لضمان سلامتك ومتابعة تقدمك بدقة",
-      icon: <FlaskConical className="w-8 h-8 text-purple-400" />,
-      bg: "bg-purple-50"
-    }
   ];
 
   return (
@@ -42,7 +36,7 @@ export default function Features() {
           <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl">
             نحن في معافى نؤمن بالحلول الشاملة. الدواء هو مجرد أداة لتسهيل الرحلة، لكن النجاح الحقيقي يكمن في الرعاية المتكاملة التي نقدمها لتغيير أسلوب حياتك.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-100">
                 <div className={`w-14 h-14 ${feature.bg} rounded-xl flex items-center justify-center mb-4`}>

@@ -10,11 +10,6 @@ export default function Navbar() {
             <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="معافى logo" className="h-8 md:h-12 w-auto" />
             <span className="text-xl md:text-3xl font-black text-[#0f4c5c]">معافى</span>
           </div>
-          <div className="hidden md:flex space-x-8 space-x-reverse">
-            <a href="#how-it-works" className="text-slate-600 hover:text-[#0f4c5c] font-medium transition-colors">كيف نعمل</a>
-            <a href="#features" className="text-slate-600 hover:text-[#0f4c5c] font-medium transition-colors">المميزات</a>
-            <a href="#faq" className="text-slate-600 hover:text-[#0f4c5c] font-medium transition-colors">الأسئلة الشائعة</a>
-          </div>
           <div className="flex items-center">
             <Link
               to="/onboarding"
