@@ -257,7 +257,7 @@ export default function OnboardingPage() {
       {/* Top bar */}
       <div className="flex-shrink-0 border-b border-slate-100 px-6 py-4 flex justify-between items-center bg-white">
         <div className="flex items-center gap-2 cursor-pointer" onClick={goHome}>
-          <img src="/logo.svg" alt="معافى" className="h-8 w-auto" />
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="معافى" className="h-8 w-auto" />
           <span className="text-xl font-black text-[#0f4c5c]">معافى</span>
         </div>
         <button onClick={goHome} className="text-slate-400 hover:text-slate-700 transition-colors">
