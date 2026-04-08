@@ -20,7 +20,7 @@ export default function WeightCalculator() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-black text-slate-900 leading-snug mb-10"
+          className="text-3xl md:text-4xl font-black text-slate-900 leading-snug mb-10 text-center"
         >
           في المتوسط، يفقد مستخدمو أدوية GLP-1 ما بين{' '}
           <span className="text-[#9dce5b]">15–20%</span> من وزنهم
