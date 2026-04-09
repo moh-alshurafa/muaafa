@@ -17,10 +17,9 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <Hero />
+        <Features />
         <WeightCalculator />
         <HowItWorksTimeline />
-
-        <Features />
         <Testimonials />
         <FAQ />
         <FinalCTA />

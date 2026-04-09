@@ -46,10 +46,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-slate-600 text-xs">
+          <p className="text-slate-600 text-sm">
             جميع الحقوق محفوظة © {new Date().getFullYear()} معافى الصحية.
           </p>
-          <p className="text-slate-700 text-xs">
+          <p className="text-slate-700 text-sm">
             هذه المنصة لا تغني عن استشارة الطبيب المختص.
           </p>
         </div>

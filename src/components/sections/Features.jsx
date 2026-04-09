@@ -25,15 +25,15 @@ export default function Features() {
   ];
 
   return (
-    <section dir="rtl" id="features" className="py-24 bg-slate-50">
+    <section dir="rtl" id="features" className="py-12 md:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-black text-[#0f4c5c] mb-4">علاج السمنة ليس مجرد دواء</h2>
-          <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#0f4c5c] mb-4">علاج السمنة ليس مجرد دواء</h2>
+          <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl font-medium">
             نحن في معافى نؤمن بالحلول الشاملة. الدواء هو مجرد أداة لتسهيل الرحلة، لكن النجاح الحقيقي يكمن في الرعاية المتكاملة التي نقدمها لتغيير أسلوب حياتك.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -43,7 +43,7 @@ export default function Features() {
                   {feature.icon}
                 </div>
                 <h4 className="text-lg font-bold text-[#0f4c5c] mb-2">{feature.title}</h4>
-                <p className="text-sm text-slate-600">{feature.desc}</p>
+                <p className="text-sm text-slate-600 font-medium">{feature.desc}</p>
               </div>
             ))}
           </div>

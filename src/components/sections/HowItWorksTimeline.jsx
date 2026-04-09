@@ -27,7 +27,7 @@ export default function HowItWorksTimeline() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="how-it-works" dir="rtl" className="py-20 bg-white">
+    <section id="how-it-works" dir="rtl" className="py-12 md:py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
 
@@ -39,31 +39,17 @@ export default function HowItWorksTimeline() {
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl font-black text-slate-900 leading-tight mb-4">
                 كيف يعمل البرنامج؟
               </h2>
-              <p className="text-slate-500 text-base leading-relaxed">
-                ثلاث خطوات بسيطة تفصلك عن حياة أكثر صحة
+              <p className="text-slate-500 text-base leading-relaxed font-medium">
+                ابدأ استشارتك المجانية في 3 خطوات بسيطة
               </p>
             </motion.div>
           </div>
 
           {/* ── Accordion + timeline ── */}
           <div className="flex-1 min-w-0">
-
-            {/* Flag label */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="flex items-center gap-2 mb-5"
-            >
-              <svg className="w-4 h-4 flex-shrink-0 text-[#0f4c5c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21V7l9-4 9 4v14M3 21h18M9 21V9h6v12" />
-              </svg>
-              <span className="text-sm font-semibold text-[#0f4c5c]">ابدأ رحلتك في 3 خطوات بسيطة</span>
-            </motion.div>
 
             {/* Steps list with vertical line */}
             <div className="relative">
@@ -131,7 +117,7 @@ export default function HowItWorksTimeline() {
                         >
                           {/* Indent matches dot width + gap (DOT + gap-4 = 20 + 16 = 36px) */}
                           <div className="pb-6" style={{ paddingRight: `${DOT + 16}px` }}>
-                            <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-5">
+                            <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-5 font-medium">
                               {step.detail}
                             </p>
 

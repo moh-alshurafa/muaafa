@@ -5,7 +5,7 @@ import { BorderBeam } from '../ui/border-beam';
 
 export default function FinalCTA() {
   return (
-    <section dir="rtl" className="py-20 bg-white">
+    <section dir="rtl" className="py-12 md:py-20 bg-white">
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -34,7 +34,7 @@ export default function FinalCTA() {
               <span className="text-[#0f4c5c]">تكفي للبدء</span>
             </h2>
 
-            <p className="text-slate-500 text-base leading-relaxed max-w-sm mx-auto mb-10">
+            <p className="text-slate-500 text-base leading-relaxed max-w-sm mx-auto mb-10 font-medium">
               تاكد من أهليتك لأدوية GLP-1 مجاناً — بدون زيارة عيادة، ونتيجة خلال يومين.
             </p>
 
@@ -45,7 +45,7 @@ export default function FinalCTA() {
               ابدأ الآن — مجاناً
             </Link>
 
-            <p className="mt-6 text-slate-400 text-xs">
+            <p className="mt-6 text-slate-400 text-sm">
               سري وآمن · بدون التزام مسبق
             </p>
           </div>

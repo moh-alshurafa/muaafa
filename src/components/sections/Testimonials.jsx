@@ -22,7 +22,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section dir="rtl" className="py-24 bg-white">
+    <section dir="rtl" className="py-12 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Header */}
@@ -36,7 +36,7 @@ export default function Testimonials() {
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-3">
             قصص نجاح أبطالنا
           </h2>
-          <p className="text-slate-500 text-base">
+          <p className="text-slate-500 text-base font-medium">
             انضم إلى الآلاف الذين غيروا حياتهم مع معافى.
           </p>
         </motion.div>
@@ -60,14 +60,14 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-slate-600 text-sm leading-relaxed flex-1">
+              <p className="text-slate-600 text-sm leading-relaxed flex-1 font-medium">
                 "{review.text}"
               </p>
 
               {/* Author */}
               <div className="pt-4 border-t border-slate-100">
                 <p className="font-bold text-slate-900 text-sm">{review.name}</p>
-                <p className="text-[#9dce5b] text-xs font-semibold mt-0.5">{review.loss}</p>
+                <p className="text-[#9dce5b] text-sm font-semibold mt-0.5">{review.loss}</p>
               </div>
             </motion.div>
           ))}

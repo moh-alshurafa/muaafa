@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import glucoseWoman from '../../assets/glucose-woman.jpg';
 
 const MIN = 60;
 const MAX = 200;
@@ -14,13 +15,30 @@ export default function WeightCalculator() {
   const percent = ((weight - MIN) / (MAX - MIN)) * 100;
 
   return (
-    <section className="py-20 bg-slate-50" dir="rtl">
-      <div className="max-w-2xl mx-auto px-6">
+    <section className="py-12 md:py-20 bg-white" dir="rtl">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+        {/* ── Left col: Image ── */}
+        <motion.div
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="w-full lg:w-[45%] flex-shrink-0"
+        >
+          <div className="rounded-3xl overflow-hidden aspect-[3/4]">
+            <img src={glucoseWoman} alt="امرأة تتحقق من مستوى الجلوكوز" className="w-full h-full object-cover" />
+          </div>
+        </motion.div>
+
+        {/* ── Right col: Content ── */}
+        <div className="flex-1 w-full">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-black text-slate-900 leading-snug mb-10 text-center"
+          className="text-3xl sm:text-4xl font-black text-slate-900 leading-snug mb-10 text-center"
         >
           في المتوسط، يفقد مستخدمو أدوية GLP-1 ما بين{' '}
           <span className="text-[#9dce5b]">15–20%</span> من وزنهم
@@ -99,6 +117,9 @@ export default function WeightCalculator() {
           تاكد من أهليتك مجاناً
         </Link>
 
+        </div>{/* end right col */}
+
+        </div>{/* end flex row */}
       </div>
     </section>
   );

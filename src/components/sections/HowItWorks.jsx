@@ -30,7 +30,7 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-[#0f4c5c] mb-4">كيف تبدأ رحلة نزول الوزن؟</h2>
-          <p className="text-xl text-slate-600">خطوات بسيطة تفصلك عن حياة صحية ومريحة.</p>
+          <p className="text-xl text-slate-600 font-medium">خطوات بسيطة تفصلك عن حياة صحية ومريحة.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -47,7 +47,7 @@ export default function HowItWorks() {
                 {step.num}
               </div>
               <h3 className="text-xl font-bold text-[#0f4c5c] mb-4 relative z-10">{step.title}</h3>
-              <p className="text-slate-600 leading-relaxed relative z-10">{step.desc}</p>
+              <p className="text-slate-600 leading-relaxed relative z-10 font-medium">{step.desc}</p>
             </motion.div>
           ))}
         </div>

@@ -24,7 +24,7 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section dir="rtl" id="faq" className="py-24 bg-slate-50">
+    <section dir="rtl" id="faq" className="py-12 md:py-24 bg-slate-50">
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
 
         {/* Header */}
@@ -38,7 +38,7 @@ export default function FAQ() {
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-3">
             الأسئلة الشائعة
           </h2>
-          <p className="text-slate-500 text-base">كل ما تريد معرفته عن برنامج معافى.</p>
+          <p className="text-slate-500 text-base font-medium">كل ما تريد معرفته عن برنامج معافى.</p>
         </motion.div>
 
         {/* Items */}
@@ -72,7 +72,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-5 text-slate-500 text-sm leading-relaxed">
+                      <p className="pb-5 text-slate-500 text-sm leading-relaxed font-medium">
                         {faq.a}
                       </p>
                     </motion.div>

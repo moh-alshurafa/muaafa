@@ -441,8 +441,8 @@ export default function OnboardingPage() {
 
         {phase === 'PHONE' && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col px-8 py-10">
-            <h3 className="text-2xl font-black text-slate-900 mb-1">إنشاء حساب</h3>
-            <p className="text-slate-500 text-sm mb-8">أدخل رقم هاتفك للمتابعة</p>
+            <h3 className="text-2xl font-black text-slate-900 mb-1 text-center">إنشاء حساب</h3>
+            <p className="text-slate-500 text-sm mb-8 text-center">أدخل رقم هاتفك للمتابعة</p>
             <form onSubmit={handlePhoneSubmit} className="space-y-5">
               <div>
                 <label className="block text-xs font-semibold text-slate-500 mb-2">رقم الهاتف</label>
@@ -456,20 +456,25 @@ export default function OnboardingPage() {
                   required
                 />
               </div>
-              <div className="space-y-3 pt-1">
-                {CONSENTS.map((consent) => (
-                  <div key={consent.key} className="flex items-center gap-3">
-                    <Checkbox checked={!!checkedConsents[consent.key]} onChange={() => setCheckedConsents(prev => ({ ...prev, [consent.key]: !prev[consent.key] }))} />
-                    <span className="text-sm text-slate-600">
-                      أوافق على{' '}
-                      <button type="button" onClick={() => setActiveModal({ title: consent.modalTitle, text: consent.modalText, key: consent.key })} className="text-[#0f4c5c] underline underline-offset-2 font-medium">
-                        {consent.label}
-                      </button>
-                    </span>
-                  </div>
-                ))}
+              <div className="pt-1">
+                <div className="flex items-center gap-3">
+                  <Checkbox
+                    checked={!!checkedConsents['all']}
+                    onChange={() => setCheckedConsents(prev => ({ ...prev, all: !prev['all'] }))}
+                  />
+                  <span className="text-[12px] text-slate-600">
+                    أوافق على{' '}
+                    <button type="button" onClick={() => setActiveModal({ title: CONSENTS[0].modalTitle, text: CONSENTS[0].modalText, key: CONSENTS[0].key })} className="text-[#0f4c5c] underline underline-offset-2 font-medium">
+                      {CONSENTS[0].label}
+                    </button>
+                    {' '}و{' '}
+                    <button type="button" onClick={() => setActiveModal({ title: CONSENTS[1].modalTitle, text: CONSENTS[1].modalText, key: CONSENTS[1].key })} className="text-[#0f4c5c] underline underline-offset-2 font-medium">
+                      {CONSENTS[1].label}
+                    </button>
+                  </span>
+                </div>
               </div>
-              <Btn type="submit" disabled={!CONSENTS.every(c => checkedConsents[c.key])}>متابعة</Btn>
+              <Btn type="submit" disabled={!checkedConsents['all']}>متابعة</Btn>
             </form>
           </motion.div>
         )}
