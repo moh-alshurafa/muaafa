@@ -260,9 +260,17 @@ export default function OnboardingPage() {
           <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="معافى" className="h-8 w-auto" />
           <span className="text-xl font-black text-[#0f4c5c]">معافى</span>
         </div>
-        <button onClick={goHome} className="text-slate-400 hover:text-slate-700 transition-colors">
-          <X className="w-5 h-5" />
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setPhase('ELIGIBLE')}
+            className="text-xs font-semibold text-slate-400 hover:text-slate-600 border border-slate-200 hover:border-slate-300 px-2.5 py-1 rounded-lg transition-colors"
+          >
+            admin
+          </button>
+          <button onClick={goHome} className="text-slate-400 hover:text-slate-700 transition-colors">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
       </div>
 
       {/* Content */}
@@ -433,16 +441,15 @@ export default function OnboardingPage() {
             <div className="w-16 h-16 bg-[#9dce5b]/15 rounded-full flex items-center justify-center mb-6">
               <svg className="w-8 h-8 text-[#9dce5b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/></svg>
             </div>
-            <h3 className="text-2xl font-black text-slate-900 mb-2">أنت مؤهل مبدئياً</h3>
-            <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-sm">أدوية GLP-1 تعتبر خياراً آمناً ومناسباً لك. الخطوة التالية هي إنشاء حساب لربطك بأحد أطبائنا.</p>
-            <div className="w-full"><Btn onClick={() => setPhase('PHONE')} variant="secondary">إنشاء حساب للمتابعة</Btn></div>
+            <h3 className="text-2xl font-black text-slate-900 mb-2">أنت مؤهل — يمكنك التحدث مع طبيب</h3>
+            <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-sm">بناءً على إجاباتك، أنت مؤهل لبرنامج معافى. خطوة واحدة متبقية — أدخل رقم هاتفك وسيتواصل معك طبيبنا مباشرةً.</p>
+            <div className="w-full"><Btn onClick={() => setPhase('PHONE')} variant="secondary">خطوة واحدة متبقية</Btn></div>
           </motion.div>
         )}
 
         {phase === 'PHONE' && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col px-8 py-10">
-            <h3 className="text-2xl font-black text-slate-900 mb-1 text-center">إنشاء حساب</h3>
-            <p className="text-slate-500 text-sm mb-8 text-center">أدخل رقم هاتفك للمتابعة</p>
+            <h3 className="text-2xl font-black text-slate-900 mb-8 text-center">أدخل رقم هاتفك للتحدث مع طبيب</h3>
             <form onSubmit={handlePhoneSubmit} className="space-y-5">
               <div>
                 <label className="block text-xs font-semibold text-slate-500 mb-2">رقم الهاتف</label>

@@ -29,13 +29,13 @@ export default function Hero() {
             </motion.h1>
 
             {/* Subtitle */}
-            <motion.p
+            <motion.ul
               {...fadeUp(0.12)}
-              className="text-slate-500 text-base md:text-lg leading-relaxed mb-8 max-w-md font-medium"
+              className="text-slate-500 text-base md:text-lg leading-relaxed mb-8 max-w-md font-medium list-disc list-outside pr-5 space-y-2"
             >
-              رحلتك نحو وزن صحي بإشراف طبي كامل<br />
-              نتائج آمنة ومضمونة مع فريق طبي متخصص يرافقك في كل خطوة
-            </motion.p>
+              <li>رحلتك نحو وزن صحي بإشراف طبي كامل</li>
+              <li>نتائج آمنة ومضمونة مع فريق طبي متخصص يرافقك في كل خطوة</li>
+            </motion.ul>
 
             {/* CTAs */}
             <motion.div {...fadeUp(0.17)} className="flex flex-col sm:flex-row gap-3 mb-8">
