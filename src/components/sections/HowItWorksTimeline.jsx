@@ -117,7 +117,7 @@ export default function HowItWorksTimeline() {
                         >
                           {/* Indent matches dot width + gap (DOT + gap-4 = 20 + 16 = 36px) */}
                           <div className="pb-6" style={{ paddingRight: `${DOT + 16}px` }}>
-                            <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-5 font-medium">
+                            <p className="text-slate-500 text-base leading-relaxed mb-5 font-medium">
                               {step.detail}
                             </p>
 

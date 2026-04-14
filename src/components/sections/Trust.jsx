@@ -54,7 +54,7 @@ export default function Trust() {
             >
               <div className="mb-5">{item.icon}</div>
               <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-              <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+              <p className="text-white/60 text-base leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>

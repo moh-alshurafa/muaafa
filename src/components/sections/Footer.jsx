@@ -9,8 +9,8 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-black text-[#00A365] mb-4">معافى</h2>
-            <p className="text-slate-500 text-sm leading-relaxed max-w-sm">
+            <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="معافى" className="h-10 w-auto mb-4" />
+            <p className="text-slate-500 text-base leading-relaxed max-w-sm">
               منصتك الطبية الموثوقة لإنقاص الوزن بطرق علمية آمنة. فريق طبي محترف وخطة مخصصة لك.
             </p>
           </div>

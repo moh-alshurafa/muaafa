@@ -25,7 +25,7 @@ export default function FAQ() {
 
   return (
     <section dir="rtl" id="faq" className="py-12 md:py-24 bg-slate-50">
-      <div className="max-w-3xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Header */}
         <motion.div
@@ -51,7 +51,7 @@ export default function FAQ() {
                   onClick={() => setOpenIdx(isOpen ? -1 : i)}
                   className="w-full flex items-center justify-between gap-4 py-5 text-right group"
                 >
-                  <span className={`font-semibold text-base transition-colors duration-200 ${isOpen ? 'text-[#00A365]' : 'text-slate-800 group-hover:text-[#00A365]'}`}>
+                  <span className="font-semibold text-base text-slate-800">
                     {faq.q}
                   </span>
                   <svg
@@ -72,7 +72,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-5 text-slate-500 text-sm leading-relaxed font-medium">
+                      <p className="pb-5 text-slate-500 text-base leading-relaxed font-medium">
                         {faq.a}
                       </p>
                     </motion.div>

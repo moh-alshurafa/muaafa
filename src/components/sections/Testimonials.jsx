@@ -60,7 +60,7 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-slate-600 text-sm leading-relaxed flex-1 font-medium">
+              <p className="text-slate-600 text-base leading-relaxed flex-1 font-medium">
                 "{review.text}"
               </p>
 

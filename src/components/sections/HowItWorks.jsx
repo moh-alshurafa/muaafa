@@ -27,7 +27,7 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-slate-900 mb-4">كيف تبدأ رحلة نزول الوزن؟</h2>
           <p className="text-xl text-slate-600 font-medium">خطوات بسيطة تفصلك عن حياة صحية ومريحة.</p>

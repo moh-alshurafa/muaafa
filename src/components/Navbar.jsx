@@ -8,7 +8,6 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center gap-2">
             <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="معافى logo" className="h-8 md:h-12 w-auto" />
-            <span className="text-xl md:text-3xl font-black text-[#00A365]">معافى</span>
           </div>
           <div className="flex items-center">
             <Link

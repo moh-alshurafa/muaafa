@@ -33,6 +33,7 @@ export default function Hero() {
               {...fadeUp(0.12)}
               className="text-slate-500 text-base md:text-lg leading-relaxed mb-8 max-w-md font-medium list-disc list-outside pr-5 space-y-2"
             >
+              <li>برنامج متخصص لإنقاص الوزن باستخدام أدوية GLP-1</li>
               <li>رحلتك نحو وزن صحي بإشراف طبي كامل</li>
               <li>نتائج آمنة ومضمونة مع فريق طبي متخصص يرافقك في كل خطوة</li>
             </motion.ul>
