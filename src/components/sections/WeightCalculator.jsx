@@ -54,7 +54,7 @@ export default function WeightCalculator() {
           {/* Current weight row */}
           <div className="flex items-center justify-between mb-6">
             <p className="text-slate-500 text-lg font-medium leading-snug">اختر وزنك الحالي</p>
-            <p className="text-4xl font-black text-[#0f4c5c] tabular-nums">
+            <p className="text-4xl font-black text-[#00A365] tabular-nums">
               {weight} <span className="text-lg font-semibold text-slate-400">كجم</span>
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function WeightCalculator() {
                 background: linear-gradient(
                   to left,
                   #e2e8f0 ${100 - percent}%,
-                  #0f4c5c ${100 - percent}%
+                  #00A365 ${100 - percent}%
                 );
               }
               .weight-slider::-webkit-slider-thumb {
@@ -82,18 +82,18 @@ export default function WeightCalculator() {
                 width: 26px;
                 height: 26px;
                 border-radius: 50%;
-                background: #0f4c5c;
+                background: #00A365;
                 border: 3px solid white;
-                box-shadow: 0 0 0 2px #0f4c5c, 0 2px 8px rgba(15,76,92,0.25);
+                box-shadow: 0 0 0 2px #00A365, 0 2px 8px rgba(15,76,92,0.25);
                 cursor: pointer;
               }
               .weight-slider::-moz-range-thumb {
                 width: 26px;
                 height: 26px;
                 border-radius: 50%;
-                background: #0f4c5c;
+                background: #00A365;
                 border: 3px solid white;
-                box-shadow: 0 0 0 2px #0f4c5c, 0 2px 8px rgba(15,76,92,0.25);
+                box-shadow: 0 0 0 2px #00A365, 0 2px 8px rgba(15,76,92,0.25);
                 cursor: pointer;
               }
             `}</style>
@@ -112,7 +112,7 @@ export default function WeightCalculator() {
 
         <Link
           to="/onboarding"
-          className="mt-6 w-full bg-[#0f4c5c] hover:bg-[#0a3642] text-white py-4 rounded-full font-black text-lg text-center transition-all shadow-sm hover:shadow-md block"
+          className="mt-6 w-full bg-[#00A365] hover:bg-[#0a3642] text-white py-4 rounded-full font-black text-lg text-center transition-all shadow-sm hover:shadow-md block"
         >
           تاكد من أهليتك مجاناً
         </Link>

@@ -22,7 +22,7 @@ const items = [
 
 export default function Trust() {
   return (
-    <section dir="rtl" className="py-20 bg-[#0f4c5c]">
+    <section dir="rtl" className="py-20 bg-[#00A365]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Header */}

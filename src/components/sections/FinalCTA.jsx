@@ -18,7 +18,7 @@ export default function FinalCTA() {
             duration={8}
             size={120}
             colorFrom="#9dce5b"
-            colorTo="#0f4c5c"
+            colorTo="#00A365"
             borderWidth={1.5}
           />
 
@@ -31,7 +31,7 @@ export default function FinalCTA() {
             <h2 className="text-4xl sm:text-5xl font-black text-slate-900 leading-tight mb-5">
               خطوة واحدة
               <br />
-              <span className="text-[#0f4c5c]">تكفي للبدء</span>
+              <span className="text-[#00A365]">تكفي للبدء</span>
             </h2>
 
             <p className="text-slate-500 text-base leading-relaxed max-w-sm mx-auto mb-10 font-medium">
@@ -40,7 +40,7 @@ export default function FinalCTA() {
 
             <Link
               to="/onboarding"
-              className="inline-flex items-center gap-2 bg-[#0f4c5c] hover:bg-[#0d3f4e] text-white font-bold text-base px-8 py-4 rounded-2xl transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-[#00A365] hover:bg-[#008a54] text-white font-bold text-base px-8 py-4 rounded-2xl transition-colors duration-200"
             >
               ابدأ الآن — مجاناً
             </Link>

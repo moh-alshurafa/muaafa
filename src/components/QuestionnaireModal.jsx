@@ -245,7 +245,7 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
             <div className="flex-shrink-0 px-8 md:px-10 pt-8 pb-4">
               <div className="flex gap-1.5 mb-5">
                 {activeQuestions.map((_, i) => (
-                  <div key={i} className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${i <= currentIndex ? 'bg-[#0f4c5c]' : 'bg-slate-100'}`} />
+                  <div key={i} className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${i <= currentIndex ? 'bg-[#00A365]' : 'bg-slate-100'}`} />
                 ))}
               </div>
               <AnimatePresence mode="wait">
@@ -255,7 +255,7 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.18 }}
-                  className="text-xl font-bold text-[#0f4c5c] leading-relaxed"
+                  className="text-xl font-bold text-[#00A365] leading-relaxed"
                 >
                   {currentQuestion.title}
                 </motion.h3>
@@ -288,7 +288,7 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
                           onClick={() => handleSingleSelect(opt)}
                           className={`w-full text-right p-4 rounded-xl border-2 transition-all ${
                             isSelected
-                              ? 'border-[#0f4c5c] bg-[#0f4c5c]/5 text-[#0f4c5c] font-bold'
+                              ? 'border-[#00A365] bg-[#00A365]/5 text-[#00A365] font-bold'
                               : 'border-slate-100 hover:border-[#9dce5b] text-slate-600'
                           }`}
                         >
@@ -309,12 +309,12 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
                           onClick={() => handleMultipleSelect(opt)}
                           className={`w-full text-right p-4 rounded-xl border-2 transition-all ${
                             isSelected
-                              ? 'border-[#0f4c5c] bg-[#0f4c5c]/5 text-[#0f4c5c] font-bold'
+                              ? 'border-[#00A365] bg-[#00A365]/5 text-[#00A365] font-bold'
                               : 'border-slate-100 hover:border-[#9dce5b] text-slate-600'
                           }`}
                         >
                           <div className="flex items-center gap-3">
-                            <div className={`w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center ${isSelected ? 'bg-[#0f4c5c] border-[#0f4c5c]' : 'border-slate-300'}`}>
+                            <div className={`w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center ${isSelected ? 'bg-[#00A365] border-[#00A365]' : 'border-slate-300'}`}>
                               {isSelected && <CheckCircle className="w-3 h-3 text-white" />}
                             </div>
                             <span>{opt}</span>
@@ -332,7 +332,7 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       placeholder={currentQuestion.placeholder}
-                      className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0f4c5c] text-xl text-center"
+                      className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00A365] text-xl text-center"
                       autoFocus
                       required
                     />
@@ -345,17 +345,17 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
             {(currentQuestion.type === 'info' || currentQuestion.type === 'multiple' || currentQuestion.type === 'number') && (
               <div className="flex-shrink-0 px-8 md:px-10 py-5 border-t border-slate-100 bg-white">
                 {currentQuestion.type === 'info' && (
-                  <button onClick={() => handleNext(null)} className="w-full bg-[#0f4c5c] text-white py-4 rounded-xl font-bold hover:bg-[#0d3f4e] transition-colors">
+                  <button onClick={() => handleNext(null)} className="w-full bg-[#00A365] text-white py-4 rounded-xl font-bold hover:bg-[#008a54] transition-colors">
                     {currentQuestion.buttonText}
                   </button>
                 )}
                 {currentQuestion.type === 'multiple' && (
-                  <button onClick={submitMultiple} className="w-full bg-[#0f4c5c] text-white py-4 rounded-xl font-bold hover:bg-[#0d3f4e] transition-colors">
+                  <button onClick={submitMultiple} className="w-full bg-[#00A365] text-white py-4 rounded-xl font-bold hover:bg-[#008a54] transition-colors">
                     متابعة
                   </button>
                 )}
                 {currentQuestion.type === 'number' && (
-                  <button onClick={(e) => { e.preventDefault(); if (inputValue) handleNext(inputValue); }} className="w-full bg-[#0f4c5c] text-white py-4 rounded-xl font-bold hover:bg-[#0d3f4e] transition-colors">
+                  <button onClick={(e) => { e.preventDefault(); if (inputValue) handleNext(inputValue); }} className="w-full bg-[#00A365] text-white py-4 rounded-xl font-bold hover:bg-[#008a54] transition-colors">
                     متابعة
                   </button>
                 )}
@@ -368,7 +368,7 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
         {phase === 'EVALUATING' && (
           <div className="p-16 text-center flex flex-col items-center justify-center min-h-[400px]">
              <Loader2 className="w-16 h-16 text-[#9dce5b] animate-spin mb-6" />
-             <h3 className="text-2xl font-bold text-[#0f4c5c] mb-2">جاري تقييم ملفك...</h3>
+             <h3 className="text-2xl font-bold text-[#00A365] mb-2">جاري تقييم ملفك...</h3>
              <p className="text-slate-500">يقوم نظامنا بتحليل إجاباتك لتحديد مدى أهليتك للعلاج</p>
           </div>
         )}
@@ -378,9 +378,9 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
             <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-600">
               <AlertCircle className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-black text-[#0f4c5c] mb-4">نحتاج لمراجعة ملفك</h3>
+            <h3 className="text-2xl font-black text-[#00A365] mb-4">نحتاج لمراجعة ملفك</h3>
             <p className="text-slate-600 mb-8 leading-relaxed">بناءً على إجاباتك، لا يُمكن صرف هذا الدواء لحالتك عبر الإنترنت، لمزيد من الإرشاد، يُمكنك التحدث مع طبيبك.</p>
-            <button onClick={onClose} className="w-full bg-[#0f4c5c] hover:bg-[#0a3642] text-white py-4 rounded-xl font-bold text-lg transition-colors">
+            <button onClick={onClose} className="w-full bg-[#00A365] hover:bg-[#0a3642] text-white py-4 rounded-xl font-bold text-lg transition-colors">
               إغلاق
             </button>
           </motion.div>
@@ -391,11 +391,11 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600">
                <CheckCircle className="w-10 h-10" />
              </div>
-             <h3 className="text-3xl font-black text-[#0f4c5c] mb-4">أنت مؤهل مبدئياً!</h3>
+             <h3 className="text-3xl font-black text-[#00A365] mb-4">أنت مؤهل مبدئياً!</h3>
              <p className="text-slate-600 mb-8 leading-relaxed text-lg">يسعدنا إخبارك بأن أدوية GLP-1 تعتبر خياراً آمناً ومناسباً لك. الخطوة التالية هي إنشاء حسابك لربطك بطبيب لبدء الاستشارة.</p>
              <button 
                onClick={() => setPhase('PHONE')} 
-               className="w-full bg-[#9dce5b] hover:bg-[#8cb851] text-[#0f4c5c] py-4 rounded-xl font-bold text-lg transition-colors"
+               className="w-full bg-[#9dce5b] hover:bg-[#8cb851] text-[#00A365] py-4 rounded-xl font-bold text-lg transition-colors"
              >
                إنشاء حساب للمتابعة
              </button>
@@ -404,7 +404,7 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
 
         {phase === 'PHONE' && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-10">
-            <h3 className="text-2xl font-black text-[#0f4c5c] mb-2">إنشاء حساب جديد</h3>
+            <h3 className="text-2xl font-black text-[#00A365] mb-2">إنشاء حساب جديد</h3>
             <p className="text-slate-600 mb-8 leading-relaxed">يرجى إدخال رقم هاتفك لإنشاء حسابك وتأكيد استشارتك الفورية مع الطبيب.</p>
             
             <form onSubmit={handlePhoneSubmit}>
@@ -420,12 +420,12 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="05X XXX XXXX"
                     dir="ltr"
-                    className="w-full pl-4 pr-12 py-4 bg-slate-50 border border-slate-200 rounded-xl text-left focus:outline-none focus:ring-2 focus:ring-[#0f4c5c] focus:border-transparent transition-all"
+                    className="w-full pl-4 pr-12 py-4 bg-slate-50 border border-slate-200 rounded-xl text-left focus:outline-none focus:ring-2 focus:ring-[#00A365] focus:border-transparent transition-all"
                     required
                   />
                 </div>
               </div>
-              <button type="submit" className="w-full bg-[#0f4c5c] hover:bg-[#0a3642] text-white py-4 rounded-xl font-bold text-lg transition-colors">
+              <button type="submit" className="w-full bg-[#00A365] hover:bg-[#0a3642] text-white py-4 rounded-xl font-bold text-lg transition-colors">
                 متابعة
               </button>
             </form>
@@ -437,7 +437,7 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
             <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-slate-600">
               <Lock className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-black text-[#0f4c5c] mb-2">تأكيد رقم الجوال</h3>
+            <h3 className="text-2xl font-black text-[#00A365] mb-2">تأكيد رقم الجوال</h3>
             <p className="text-slate-600 mb-8 leading-relaxed">أدخل رمز التحقق المكون من 4 أرقام المرسل إلى <span className="font-bold inline-block" dir="ltr">{phone}</span></p>
             
             <form onSubmit={handleOtpSubmit}>
@@ -451,13 +451,13 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
                     value={digit}
                     onChange={(e) => handleOtpChange(index, e.target.value)}
                     onKeyDown={(e) => handleOtpKeyDown(index, e)}
-                    className={`w-14 h-16 text-center text-2xl font-bold bg-slate-50 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0f4c5c] transition-all ${otpError ? 'border-red-500 text-red-500' : 'border-slate-200'}`}
+                    className={`w-14 h-16 text-center text-2xl font-bold bg-slate-50 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00A365] transition-all ${otpError ? 'border-red-500 text-red-500' : 'border-slate-200'}`}
                   />
                 ))}
               </div>
               {otpError && <p className="text-red-500 text-sm text-center mb-6 font-bold">الرمز غير صحيح، جرب 0000</p>}
               
-              <button type="submit" className="w-full bg-[#0f4c5c] hover:bg-[#0a3642] text-white py-4 rounded-xl font-bold text-lg transition-colors">
+              <button type="submit" className="w-full bg-[#00A365] hover:bg-[#0a3642] text-white py-4 rounded-xl font-bold text-lg transition-colors">
                 تأكيد وإنشاء الحساب
               </button>
             </form>
@@ -469,7 +469,7 @@ export default function QuestionnaireModal({ isOpen, onClose }) {
             <div className="relative w-32 h-32 mx-auto mb-8">
               <div className="absolute inset-0 bg-[#9dce5b] rounded-full animate-ping opacity-20"></div>
               <div className="absolute inset-2 bg-[#9dce5b] rounded-full animate-pulse opacity-40"></div>
-              <div className="absolute inset-4 bg-[#0f4c5c] rounded-full flex items-center justify-center text-white shadow-xl z-10">
+              <div className="absolute inset-4 bg-[#00A365] rounded-full flex items-center justify-center text-white shadow-xl z-10">
                 <PhoneCall className="w-10 h-10" />
               </div>
             </div>

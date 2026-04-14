@@ -51,7 +51,7 @@ export default function FAQ() {
                   onClick={() => setOpenIdx(isOpen ? -1 : i)}
                   className="w-full flex items-center justify-between gap-4 py-5 text-right group"
                 >
-                  <span className={`font-semibold text-base transition-colors duration-200 ${isOpen ? 'text-[#0f4c5c]' : 'text-slate-800 group-hover:text-[#0f4c5c]'}`}>
+                  <span className={`font-semibold text-base transition-colors duration-200 ${isOpen ? 'text-[#00A365]' : 'text-slate-800 group-hover:text-[#00A365]'}`}>
                     {faq.q}
                   </span>
                   <svg

@@ -233,8 +233,8 @@ export default function OnboardingPage() {
       disabled={disabled}
       className={`w-full py-3.5 rounded-full font-bold text-base transition-colors disabled:opacity-40 disabled:cursor-not-allowed ${
         variant === 'primary'
-          ? 'bg-[#0f4c5c] hover:bg-[#0d3f4e] text-white'
-          : 'bg-[#9dce5b] hover:bg-[#8cb851] text-[#0f4c5c]'
+          ? 'bg-[#00A365] hover:bg-[#008a54] text-white'
+          : 'bg-[#9dce5b] hover:bg-[#8cb851] text-[#00A365]'
       }`}
     >
       {children}
@@ -245,7 +245,7 @@ export default function OnboardingPage() {
     <button
       type="button"
       onClick={onChange}
-      className={`w-5 h-5 rounded flex-shrink-0 border-2 flex items-center justify-center transition-colors ${checked ? 'bg-[#0f4c5c] border-[#0f4c5c]' : 'border-slate-300 bg-white'}`}
+      className={`w-5 h-5 rounded flex-shrink-0 border-2 flex items-center justify-center transition-colors ${checked ? 'bg-[#00A365] border-[#00A365]' : 'border-slate-300 bg-white'}`}
     >
       {checked && <svg className="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>}
     </button>
@@ -258,7 +258,7 @@ export default function OnboardingPage() {
       <div className="flex-shrink-0 border-b border-slate-100 px-6 py-4 flex justify-between items-center bg-white">
         <div className="flex items-center gap-2 cursor-pointer" onClick={goHome}>
           <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="معافى" className="h-8 w-auto" />
-          <span className="text-xl font-black text-[#0f4c5c]">معافى</span>
+          <span className="text-xl font-black text-[#00A365]">معافى</span>
         </div>
         <div className="flex items-center gap-3">
           <button
@@ -285,7 +285,7 @@ export default function OnboardingPage() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-[#0f4c5c] rounded-full transition-all duration-500"
+                    className="h-full bg-[#00A365] rounded-full transition-all duration-500"
                     style={{ width: `${((currentIndex + 1) / activeQuestions.length) * 100}%` }}
                   />
                 </div>
@@ -327,7 +327,7 @@ export default function OnboardingPage() {
                         <Checkbox checked={!!checkedConsents[consent.key]} onChange={() => setCheckedConsents(prev => ({ ...prev, [consent.key]: !prev[consent.key] }))} />
                         <span className="text-sm text-slate-600">
                           أوافق على{' '}
-                          <button onClick={() => setActiveModal({ title: consent.modalTitle, text: consent.modalText, key: consent.key })} className="text-[#0f4c5c] underline underline-offset-2 font-medium">
+                          <button onClick={() => setActiveModal({ title: consent.modalTitle, text: consent.modalText, key: consent.key })} className="text-[#00A365] underline underline-offset-2 font-medium">
                             {consent.label}
                           </button>
                         </span>
@@ -345,7 +345,7 @@ export default function OnboardingPage() {
                           key={idx}
                           onClick={() => handleSingleSelect(opt)}
                           className={`w-full text-right px-4 py-3.5 rounded-2xl border transition-all text-sm font-medium ${
-                            isSelected ? 'border-[#0f4c5c] bg-[#0f4c5c]/5 text-[#0f4c5c]' : 'border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50'
+                            isSelected ? 'border-[#00A365] bg-[#00A365]/5 text-[#00A365]' : 'border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50'
                           }`}
                         >
                           {opt}
@@ -364,11 +364,11 @@ export default function OnboardingPage() {
                           key={idx}
                           onClick={() => handleMultipleSelect(opt)}
                           className={`w-full text-right px-4 py-3.5 rounded-2xl border transition-all text-sm font-medium ${
-                            isSelected ? 'border-[#0f4c5c] bg-[#0f4c5c]/5 text-[#0f4c5c]' : 'border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50'
+                            isSelected ? 'border-[#00A365] bg-[#00A365]/5 text-[#00A365]' : 'border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50'
                           }`}
                         >
                           <div className="flex items-center gap-3">
-                            <div className={`w-5 h-5 rounded border-2 flex-shrink-0 flex items-center justify-center transition-colors ${isSelected ? 'bg-[#0f4c5c] border-[#0f4c5c]' : 'border-slate-300'}`}>
+                            <div className={`w-5 h-5 rounded border-2 flex-shrink-0 flex items-center justify-center transition-colors ${isSelected ? 'bg-[#00A365] border-[#00A365]' : 'border-slate-300'}`}>
                               {isSelected && <svg className="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>}
                             </div>
                             <span>{opt}</span>
@@ -388,7 +388,7 @@ export default function OnboardingPage() {
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value.replace(/[^0-9]/g, ''))}
                       placeholder={currentQuestion.placeholder}
-                      className="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-2xl focus:outline-none focus:border-[#0f4c5c] text-lg text-center font-bold placeholder:text-slate-300 placeholder:font-normal transition-colors"
+                      className="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-2xl focus:outline-none focus:border-[#00A365] text-lg text-center font-bold placeholder:text-slate-300 placeholder:font-normal transition-colors"
                       autoFocus
                       required
                     />
@@ -419,7 +419,7 @@ export default function OnboardingPage() {
 
         {phase === 'EVALUATING' && (
           <div className="flex flex-col items-center text-center px-8 py-12">
-            <Loader2 className="w-12 h-12 text-[#0f4c5c] animate-spin mb-6" />
+            <Loader2 className="w-12 h-12 text-[#00A365] animate-spin mb-6" />
             <h3 className="text-2xl font-black text-slate-900 mb-2">جاري تقييم ملفك...</h3>
             <p className="text-slate-400 text-sm">يقوم نظامنا بتحليل إجاباتك طبياً</p>
           </div>
@@ -443,7 +443,7 @@ export default function OnboardingPage() {
             </div>
             <h3 className="text-2xl font-black text-slate-900 mb-2">أنت مؤهل — يمكنك التحدث مع طبيب</h3>
             <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-sm">بناءً على إجاباتك، أنت مؤهل لبرنامج معافى. خطوة واحدة متبقية — أدخل رقم هاتفك وسيتواصل معك طبيبنا مباشرةً.</p>
-            <div className="w-full"><Btn onClick={() => setPhase('PHONE')} variant="secondary">خطوة واحدة متبقية</Btn></div>
+            <div className="w-full"><Btn onClick={() => setPhase('PHONE')}>خطوة واحدة متبقية</Btn></div>
           </motion.div>
         )}
 
@@ -459,7 +459,7 @@ export default function OnboardingPage() {
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="05XXXXXXXX"
                   dir="ltr"
-                  className="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-left text-base focus:outline-none focus:border-[#0f4c5c] transition-colors font-medium placeholder:text-slate-300"
+                  className="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-left text-base focus:outline-none focus:border-[#00A365] transition-colors font-medium placeholder:text-slate-300"
                   required
                 />
               </div>
@@ -471,11 +471,11 @@ export default function OnboardingPage() {
                   />
                   <span className="text-[12px] text-slate-600">
                     أوافق على{' '}
-                    <button type="button" onClick={() => setActiveModal({ title: CONSENTS[0].modalTitle, text: CONSENTS[0].modalText, key: CONSENTS[0].key })} className="text-[#0f4c5c] underline underline-offset-2 font-medium">
+                    <button type="button" onClick={() => setActiveModal({ title: CONSENTS[0].modalTitle, text: CONSENTS[0].modalText, key: CONSENTS[0].key })} className="text-[#00A365] underline underline-offset-2 font-medium">
                       {CONSENTS[0].label}
                     </button>
                     {' '}و{' '}
-                    <button type="button" onClick={() => setActiveModal({ title: CONSENTS[1].modalTitle, text: CONSENTS[1].modalText, key: CONSENTS[1].key })} className="text-[#0f4c5c] underline underline-offset-2 font-medium">
+                    <button type="button" onClick={() => setActiveModal({ title: CONSENTS[1].modalTitle, text: CONSENTS[1].modalText, key: CONSENTS[1].key })} className="text-[#00A365] underline underline-offset-2 font-medium">
                       {CONSENTS[1].label}
                     </button>
                   </span>
@@ -501,7 +501,7 @@ export default function OnboardingPage() {
                     value={digit}
                     onChange={(e) => handleOtpChange(index, e.target.value)}
                     onKeyDown={(e) => handleOtpKeyDown(index, e)}
-                    className={`w-12 h-12 text-center text-xl font-black bg-white border-2 rounded-xl focus:outline-none focus:border-[#0f4c5c] transition-colors ${otpError ? 'border-red-400 text-red-500 bg-red-50' : 'border-slate-200'}`}
+                    className={`w-12 h-12 text-center text-xl font-black bg-white border-2 rounded-xl focus:outline-none focus:border-[#00A365] transition-colors ${otpError ? 'border-red-400 text-red-500 bg-red-50' : 'border-slate-200'}`}
                   />
                 ))}
               </div>
@@ -515,7 +515,7 @@ export default function OnboardingPage() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center text-center px-8 py-12">
             <div className="relative w-24 h-24 mb-8">
               <div className="absolute inset-0 bg-[#9dce5b]/20 rounded-full animate-ping" />
-              <div className="absolute inset-2 bg-[#0f4c5c] rounded-full flex items-center justify-center text-white">
+              <div className="absolute inset-2 bg-[#00A365] rounded-full flex items-center justify-center text-white">
                 <PhoneCall className="w-8 h-8" />
               </div>
             </div>
@@ -546,7 +546,7 @@ export default function OnboardingPage() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between px-7 py-5 border-b border-slate-100">
-                <h3 className="text-base font-black text-[#0f4c5c] leading-snug">{activeModal.title}</h3>
+                <h3 className="text-base font-black text-[#00A365] leading-snug">{activeModal.title}</h3>
                 <button onClick={() => setActiveModal(null)} className="text-slate-400 hover:text-slate-700 transition-colors flex-shrink-0 mr-3">
                   <X className="w-5 h-5" />
                 </button>
@@ -557,7 +557,7 @@ export default function OnboardingPage() {
               <div className="px-7 py-5 border-t border-slate-100">
                 <button
                   onClick={() => { setCheckedConsents(prev => ({ ...prev, [activeModal.key]: true })); setActiveModal(null); }}
-                  className="w-full bg-[#0f4c5c] text-white py-3 rounded-xl font-bold hover:bg-[#0d3f4e] transition-colors"
+                  className="w-full bg-[#00A365] text-white py-3 rounded-xl font-bold hover:bg-[#008a54] transition-colors"
                 >
                   أوافق
                 </button>

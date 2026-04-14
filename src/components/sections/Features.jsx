@@ -13,7 +13,7 @@ export default function Features() {
     {
       title: "مراقبة حيوية ذكية",
       desc: "تتبع دقيق لتقدمك مع تقارير أسبوعية وتعديلات فورية على خطتك العلاجية",
-      icon: <Activity className="w-8 h-8 text-[#0f4c5c]" />,
+      icon: <Activity className="w-8 h-8 text-[#00A365]" />,
       bg: "bg-emerald-50"
     },
     {
@@ -32,7 +32,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl font-black text-[#0f4c5c] mb-4">علاج السمنة ليس مجرد دواء</h2>
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">علاج السمنة ليس مجرد دواء</h2>
           <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl font-medium">
             نحن في معافى نؤمن بالحلول الشاملة. الدواء هو مجرد أداة لتسهيل الرحلة، لكن النجاح الحقيقي يكمن في الرعاية المتكاملة التي نقدمها لتغيير أسلوب حياتك.
           </p>
@@ -42,7 +42,7 @@ export default function Features() {
                 <div className={`w-14 h-14 ${feature.bg} rounded-xl flex items-center justify-center mb-4`}>
                   {feature.icon}
                 </div>
-                <h4 className="text-lg font-bold text-[#0f4c5c] mb-2">{feature.title}</h4>
+                <h4 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h4>
                 <p className="text-sm text-slate-600 font-medium">{feature.desc}</p>
               </div>
             ))}

@@ -8,12 +8,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center gap-2">
             <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="معافى logo" className="h-8 md:h-12 w-auto" />
-            <span className="text-xl md:text-3xl font-black text-[#0f4c5c]">معافى</span>
+            <span className="text-xl md:text-3xl font-black text-[#00A365]">معافى</span>
           </div>
           <div className="flex items-center">
             <Link
               to="/onboarding"
-              className="bg-[#9dce5b] hover:bg-[#8cb851] text-[#0f4c5c] px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-sm inline-block"
+              className="bg-[#00A365] hover:bg-[#008a54] text-white px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-sm inline-block"
             >
               ابدأ رحلتك
             </Link>

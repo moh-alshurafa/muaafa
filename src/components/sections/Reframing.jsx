@@ -12,7 +12,7 @@ export default function Reframing() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-[#0f4c5c] mb-6 leading-tight">
+            <h2 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">
               السمنة ليست كسلاً،<br/> إنها حالة طبية قابلة للعلاج.
             </h2>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
@@ -30,8 +30,8 @@ export default function Reframing() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-slate-50 p-10 rounded-3xl relative overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#9dce5b] to-[#0f4c5c]" />
-            <h3 className="text-2xl font-bold text-[#0f4c5c] mb-6">ماذا تفعل أدوية GLP-1؟</h3>
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#9dce5b] to-[#00A365]" />
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">ماذا تفعل أدوية GLP-1؟</h3>
             <ul className="space-y-6">
               {[
                 'تأخير إفراغ المعدة للشعور بالشبع أسرع',
@@ -41,7 +41,7 @@ export default function Reframing() {
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#9dce5b]/20 flex items-center justify-center mt-1">
-                    <svg className="w-5 h-5 text-[#0f4c5c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                    <svg className="w-5 h-5 text-[#00A365]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <span className="text-lg text-slate-700 font-medium">{item}</span>
                 </li>

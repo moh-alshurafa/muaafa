@@ -25,7 +25,7 @@ export default function Hero() {
               {...fadeUp(0.06)}
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-5"
             >
-              مرحباً بك في برنامج معافى <span className="text-[#0f4c5c]">لإنقاص الوزن</span>
+              مرحباً بك في برنامج معافى <span className="text-[#00A365]">لإنقاص الوزن</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -41,7 +41,7 @@ export default function Hero() {
             <motion.div {...fadeUp(0.17)} className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
                 to="/onboarding"
-                className="text-center bg-[#0f4c5c] hover:bg-[#0d3f4e] text-white font-bold text-sm px-7 py-3.5 rounded-full transition-colors duration-200"
+                className="text-center bg-[#00A365] hover:bg-[#008a54] text-white font-bold text-sm px-7 py-3.5 rounded-full transition-colors duration-200"
               >
                 ابدأ الآن مجاناً
               </Link>
@@ -74,7 +74,7 @@ export default function Hero() {
                 className="w-full h-full object-cover"
               />
               {/* subtle tint overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f4c5c]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#00A365]/20 to-transparent" />
             </div>
           </motion.div>
 
